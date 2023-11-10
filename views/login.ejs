@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form action="/login" method="POST">
+      <% if (messages.error) { %>
+      <div class="alert alert-danger">
+        <strong><%= messages.error %> </strong>
+      </div>
+      <% } %>
+      <h1>Login</h1>
+      <input type="email" name="email" />
+      <input type="password" name="password" />
+      <button type="submit" class="btn">Log in</button>
+      <p>Don't have an account yet? <a href="/register">Register</a></p>
+    </form>
+  </body>
+</html>
